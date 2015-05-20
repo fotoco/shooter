@@ -17,7 +17,8 @@ public class Bullet : MonoBehaviour {
 	{
 		if(collision.gameObject.tag == "Box")
 		{
-			Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
+			collision.gameObject.SendMessage("ApplyDamage");
 		}
 
 		Destroy(gameObject);
